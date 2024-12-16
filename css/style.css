@@ -1,3 +1,5 @@
+@import './color.css';
+
 html,
 body {
   padding: 0;
@@ -19,7 +21,7 @@ body {
   text-transform: uppercase;
   font-weight: 400;
   font-size: 36px; /* когда экран больше - то 60px */
-  color: #313131;
+  color: var(--text-main);
   margin: 0;
 }
 
@@ -51,27 +53,26 @@ body {
   text-align: center;
   border-radius: 66px;
   margin: 16px 16px 0 0;
+  border: none;
 }
 
 .buttons button:nth-child(1) {
-  background-color: #1f1f1f;
-  color: #ffffff;
+  background-color: var(--button-dark);
+  color: var(--button-light-text);
 }
 .buttons button:nth-child(2) {
-  background-color: #ffffff;
-  color: #1f1f1f;
+  background-color: var(--button-light);
+  color: var(--button-dark-text);
+  opacity: 90%;
 }
 
 .top_content {
   background-image: url('../svg/header_city.svg');
-  /* width: 100%; */
-  height: 723px; /* 728px 777px 812px */
   background-repeat: no-repeat;
-
-  /* background-position: top; */
   background-position: 65%;
   background-size: cover;
 
+  height: 723px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -98,7 +99,7 @@ body {
 }
 
 .block_1 span {
-  color: #f54932;
+  color: var(--color-accent);
   font-weight: 400;
 }
 
@@ -141,8 +142,38 @@ body {
 }
 
 .block_2 span {
-  color: #f54932;
+  color: var(--color-accent);
   font-weight: 400;
+}
+
+.block_3 div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  border-bottom: 2px solid var(--border-secondary);
+  padding: 15px;
+}
+
+.block_3 div p {
+  font-size: 20px;
+  margin: 5px;
+}
+
+.block_3 div p:nth-child(1) {
+  color: var(--text-main);
+  opacity: 70%;
+}
+.block_3 div p:nth-child(2) {
+  color: var(--text-main);
+  font-weight: bold;
+}
+.s {
+  text-decoration: var(--color-accent) line-through;
+}
+
+.admin_text {
+  color: var(--text-blue);
 }
 
 #members {
@@ -176,8 +207,8 @@ body {
   width: 113px;
   height: 35px;
   border-radius: 62px;
-  border: 1px solid #3057a2;
-  color: #3057a2;
+  border: 1px solid var(--text-blue);
+  color: var(--text-blue);
   background: transparent;
   margin-top: 20px;
 }
@@ -193,18 +224,18 @@ body {
 }
 
 marquee {
-  background-color: #f54932;
-  color: #ffffff;
+  background-color: var(--color-accent);
+  color: var(--text-light);
   text-transform: uppercase;
   padding: 10px 0;
 }
 
 footer {
-  background-color: #e9ded4;
+  background-color: var(--bg-secondary);
 }
 
 footer p {
-  color: #313131;
+  color: var(--text-main);
   text-align: start;
   margin: 0;
   padding: 45px;

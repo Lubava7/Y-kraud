@@ -1,0 +1,19 @@
+:root {
+  --white: #ffffff;
+
+  --bg-main: #e3e3e3;
+
+  --text-main: #313131;
+  --text-light: #ffffff;
+  --text-blue: #3057a2;
+
+  --color-accent: #f54932;
+
+  --button-dark: #1f1f1f;
+  --button-light-text: #ffffff;
+  --button-light: #ffffff;
+  --button-dark-text: #1f1f1f;
+
+  --button-members-color: #3057a2;
+  --border-secondary: #d0d0d0;
+}
