@@ -109,13 +109,17 @@ body {
 }
 
 .block_2 div {
-  background: url('../svg/man_chess.svg');
-  width: 100%;
+  width: 374px;
   height: 402px;
   background-repeat: no-repeat;
 }
 
-.block_2 div .animated_hand {
+.man_chess {
+  width: 100%;
+  background: url('../svg/man_chess.svg');
+}
+
+.animated_hand {
   background-image: url('../svg/hand.svg');
   background-position: bottom right;
   position: relative;
