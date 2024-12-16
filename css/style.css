@@ -5,6 +5,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Merriweather';
+  scroll-behavior: smooth;
 }
 
 .logo {
@@ -33,10 +34,6 @@ body {
   text-align: center;
 }
 
-/* .description {
-  border: 1px solid green;
-} */
-
 .description p {
   font-size: 18px;
 }
@@ -46,8 +43,11 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
+.buttons a {
+  text-decoration: none;
+}
 
-.buttons button {
+.buttons a button {
   width: 335px;
   height: 47px;
   text-align: center;
@@ -56,11 +56,11 @@ body {
   border: none;
 }
 
-.buttons button:nth-child(1) {
+.buttons a:nth-child(1) button {
   background-color: var(--button-dark);
   color: var(--button-light-text);
 }
-.buttons button:nth-child(2) {
+.buttons a:nth-child(2) button {
   background-color: var(--button-light);
   color: var(--button-dark-text);
   opacity: 90%;
@@ -172,8 +172,77 @@ body {
   text-decoration: var(--color-accent) line-through;
 }
 
-.admin_text {
+.blue_text {
   color: var(--text-blue);
+  font-size: 18px;
+}
+
+.phases_carousel h2 {
+  font-size: 36px;
+  font-weight: 100;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.phases_carousel p {
+  margin: 0;
+}
+
+.phases_carousel p:nth-child(2) {
+  padding: 0 35px;
+  word-break: break-word;
+}
+
+#carousel {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  overflow: scroll;
+}
+
+#carousel container {
+  background-image: url('../svg/cooper_bg.svg'), url('../svg/phase_bg.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 335px;
+  height: 300px;
+
+  margin: 0 15px;
+}
+#carousel container div {
+  width: 330px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 36px;
+  height: 36px;
+  border-radius: 60px;
+  font-weight: bold;
+
+  color: var(--text-main);
+  background-color: var(--white);
+}
+
+.members_carousel h2 {
+  font-size: 36px;
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 #members {
@@ -190,6 +259,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   width: 335px;
   height: 388px;
   padding: 0 45px;

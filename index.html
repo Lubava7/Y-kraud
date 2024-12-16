@@ -27,8 +27,10 @@
         </div>
 
         <div class="buttons">
-          <button>Поддержать шахматную мысль</button>
-          <button>Подробнее о турнире</button>
+          <a href="#support_chess">
+            <button>Поддержать шахматную мысль</button></a
+          >
+          <a href="#about_tournament"> <button>Подробнее о турнире</button></a>
         </div>
       </div>
 
@@ -38,7 +40,7 @@
     </div>
 
     <content>
-      <div class="block_1">
+      <div id="support_chess" class="block_1">
         <p>Чтобы поддержать Международный васюкинский турнир</p>
         <div><!-- тут картинка --></div>
         <p>
@@ -59,7 +61,7 @@
         </p>
       </div>
 
-      <div class="block_3">
+      <div id="about_tournament" class="block_3">
         <div>
           <p>Место проведения:</p>
           <p>Клуб «Картонажник»</p>
@@ -89,24 +91,72 @@
         </div>
       </div>
 
-      <div class="admin_text">
-        <p>По всем вопросам обращаться в администрацию к К. Михельсону</p>
-      </div>
+      <p class="blue_text">
+        По всем вопросам обращаться в администрацию к К. Михельсону
+      </p>
 
-      <div class="scroll_1">
+      <div class="phases_carousel">
         <h2>Этапы преображения Васюков</h2>
-        <p>Будущие источники обогащения васюкинцев</p>
+        <p class="blue_text">Будущие источники обогащения васюкинцев</p>
 
-        <div>
-          <!-- скролл с картинками здесь -->
+        <div id="carousel">
+          <container>
+            <div>
+              <p class="circle">1</p>
+              <p>Строительство железнодорожной магистрали Москва-Васюки</p>
+            </div>
+            <div>
+              <p class="circle">2</p>
+              <p>
+                Открытие фешенебельной гостиницы «Проходная пешка» и других
+                небоскрёбов
+              </p>
+            </div>
+          </container>
+          <container>
+            <div>
+              <p class="circle">3</p>
+              <p>
+                Поднятие сельского хозяйства в радиусе на тысячу километров:
+                производство овощей, фруктов, икры, шоколадных конфет
+              </p>
+            </div>
+          </container>
+          <container>
+            <div>
+              <p class="circle">4</p>
+              <p>Строительство дворца для турнира</p>
+            </div>
+            <div>
+              <p class="circle">5</p>
+              <p>Размещение гаражей для гостевого</p>
+              автотранспорта
+            </div>
+          </container>
+          <container>
+            <div>
+              <p class="circle">6</p>
+              <p>
+                Постройка сверхмощной радиостанции для передачи всему миру
+                сенсационных результатов
+              </p>
+            </div>
+          </container>
+          <container>
+            <div>
+              <p class="circle">7</p>
+              <p>
+                Создание аэропорта «Большие Васюки» с регулярным отправлением
+                почтовых самолётов и дирижаблей во все концы света, включая
+                Лос-Анжелос и Мельбурн
+              </p>
+            </div>
+          </container>
         </div>
       </div>
 
-      <div class="scroll_2">
-        <h2>
-          Участники турнира
-          <!-- тут start и uppercase -->
-        </h2>
+      <div class="members_carousel">
+        <h2>Участники турнира</h2>
 
         <div id="members">
           <!-- тут участники -->
