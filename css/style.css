@@ -183,14 +183,6 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
 }
-.phases_carousel p {
-  margin: 0;
-}
-
-.phases_carousel p:nth-child(2) {
-  padding: 0 35px;
-  word-break: break-word;
-}
 
 #carousel {
   display: flex;
@@ -216,12 +208,51 @@ body {
 
   margin: 0 15px;
 }
-#carousel container div {
-  width: 330px;
+
+#carousel container ol {
+  list-style: none;
+  padding: 0 15px;
+  margin: 0;
+  counter-reset: list-counter;
+
+  width: 335px;
+}
+
+#carousel container ol li {
+  position: relative;
+  padding: 0 25px 0 50px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  counter-increment: list-counter;
+}
+
+#carousel container ol li::before {
+  content: counter(list-counter);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--white);
+  color: var(--text-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+#carousel container p {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
+
+  word-break: break-word;
 }
 
 .circle {
