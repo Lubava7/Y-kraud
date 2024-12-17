@@ -127,17 +127,8 @@ containers.forEach((_, index) => {
 const bullets = document.querySelectorAll('.bullet');
 
 function updateArrows() {
-  if (currentPhaseIndex === 0) {
-    prevArrow.classList.add('disabled');
-  } else {
-    prevArrow.classList.remove('disabled');
-  }
-
-  if (currentPhaseIndex === containers.length - 1) {
-    nextArrow.classList.add('disabled');
-  } else {
-    nextArrow.classList.remove('disabled');
-  }
+  prevArrow.disabled = currentPhaseIndex === 0;
+  nextArrow.disabled = currentPhaseIndex === containers.length - 1;
 }
 
 function updateActiveBullet() {

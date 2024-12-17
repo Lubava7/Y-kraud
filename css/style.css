@@ -237,6 +237,7 @@ body {
 
   height: 300px;
   margin: 0 20px;
+  padding: 60px;
 
   position: relative;
   scroll-snap-align: center;
@@ -253,7 +254,7 @@ body {
   position: relative;
   padding: 0 25px 0 50px;
   margin-bottom: 20px;
-  font-size: 19px;
+  font-size: 16px;
   counter-increment: list-counter;
 }
 
@@ -551,6 +552,10 @@ footer p {
     text-overflow: ellipsis;
   }
 
+  .phases_carousel .text {
+    padding: 0 0 0 3%;
+  }
+
   .phases_carousel .page_buttons {
     display: none;
   }
@@ -577,6 +582,10 @@ footer p {
 
   #carousel ol container {
     margin: 0;
+    padding: 0;
+  }
+  #carousel ol container li {
+    font-size: 19px;
   }
 
   #carousel container:nth-child(1) {
