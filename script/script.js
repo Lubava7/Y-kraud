@@ -1,5 +1,5 @@
+// переиспользуемый бегущий динамический текст
 const runningText = document.getElementsByClassName('running_text');
-
 for (let i = 0; i < runningText.length; i++) {
   runningText[i].textContent = `
     Дело помощи утопающим — дело рук самих утопающих! • Шахматы двигают
@@ -8,6 +8,7 @@ for (let i = 0; i < runningText.length; i++) {
   `;
 }
 
+// участники
 const members = [
   {
     id: 1,
@@ -41,6 +42,7 @@ const members = [
   },
 ];
 
+// динамическое отображение участников
 const membersSection = document.getElementById('members');
 const memberCount = document.getElementById('member_count');
 
@@ -71,6 +73,7 @@ members.forEach((member) => {
   }
 });
 
+// скролл участников
 function updateMemberCount() {
   memberCount.textContent = `${currentIndex + 1}/${totalMembers}`;
 }
@@ -104,3 +107,69 @@ document.querySelector('#next_arrow').addEventListener('click', () => {
   });
   updateMemberCount();
 });
+
+// Скролл этапов
+const carousel = document.getElementById('carousel');
+const prevArrow = document.getElementById('phase_prev_arrow');
+const nextArrow = document.getElementById('phase_next_arrow');
+const bulletsContainer = document.getElementById('phase_count');
+
+const containers = document.querySelectorAll('#carousel ol container');
+let currentPhaseIndex = 0;
+
+containers.forEach((_, index) => {
+  const bullet = document.createElement('div');
+  bullet.classList.add('bullet');
+  if (index === currentPhaseIndex) bullet.classList.add('active');
+  bulletsContainer.appendChild(bullet);
+});
+
+const bullets = document.querySelectorAll('.bullet');
+
+function updateArrows() {
+  if (currentPhaseIndex === 0) {
+    prevArrow.classList.add('disabled');
+  } else {
+    prevArrow.classList.remove('disabled');
+  }
+
+  if (currentPhaseIndex === containers.length - 1) {
+    nextArrow.classList.add('disabled');
+  } else {
+    nextArrow.classList.remove('disabled');
+  }
+}
+
+function updateActiveBullet() {
+  bullets.forEach((bullet, index) => {
+    bullet.classList.toggle('active', index === currentPhaseIndex);
+  });
+}
+
+function scrollToContainer(index) {
+  currentPhaseIndex = (index + containers.length) % containers.length;
+
+  const targetContainer = containers[currentPhaseIndex];
+  const targetScroll = targetContainer.offsetLeft;
+
+  carousel.scrollTo({ left: targetScroll, behavior: 'smooth' });
+
+  updateArrows();
+  updateActiveBullet();
+}
+
+prevArrow.addEventListener('click', () => {
+  scrollToContainer(currentPhaseIndex - 1);
+});
+
+nextArrow.addEventListener('click', () => {
+  scrollToContainer(currentPhaseIndex + 1);
+});
+
+bullets.forEach((bullet, index) => {
+  bullet.addEventListener('click', () => {
+    scrollToContainer(index);
+  });
+});
+
+updateArrows();

@@ -42,7 +42,7 @@
     <content>
       <div id="support_chess" class="block_1">
         <p>Чтобы поддержать Международный васюкинский турнир</p>
-        <div><!-- тут картинка --></div>
+        <div><!-- тут картинка min screen--></div>
         <p>
           посетите лекцию на тему: <span>«Плодотворная дебютная идея»</span>
         </p>
@@ -53,47 +53,43 @@
           <!-- тут картинка -->
           <div class="animated_hand"></div>
         </div>
-        <p>
-          и Сеанс <br />
-          <span>одновременной игры в шахматы на 160 досках</span>
-          гроссмейстера <br />
-          О. Бендера
-        </p>
-      </div>
-
-      <div id="about_tournament" class="block_3">
-        <div>
-          <p>Место проведения:</p>
-          <p>Клуб «Картонажник»</p>
-        </div>
-
-        <div>
-          <p>Дата и время мероприятия:</p>
-          <p>22 июня 1927 г. в 18:00</p>
-        </div>
-
-        <div>
-          <p>Стоимость входных билетов:</p>
-          <p>20 коп.</p>
-        </div>
-
-        <div>
-          <p>Плата за игру:</p>
-          <p>50 коп.</p>
-        </div>
-
-        <div>
-          <p>Взнос на телеграммы:</p>
+        <box>
           <p>
-            <span class="s">100 руб.</span>
-            21 руб. 16 коп.
+            и Сеанс
+            <!-- <br /> -->
+            <span>одновременной игры в шахматы на 160 досках</span>
+            гроссмейстера
+            <!-- <br /> -->
+            О. Бендера
           </p>
-        </div>
-      </div>
+          <table id="about_tournament" class="block_3">
+            <tr>
+              <td>Место проведения:</td>
+              <td>Клуб «Картонажник»</td>
+            </tr>
+            <tr>
+              <td>Дата и время мероприятия:</td>
+              <td>22 июня 1927 г. в 18:00</td>
+            </tr>
+            <tr>
+              <td>Стоимость входных билетов:</td>
+              <td>20 коп.</td>
+            </tr>
+            <tr>
+              <td>Плата за игру:</td>
+              <td>50 коп.</td>
+            </tr>
+            <tr>
+              <td>Взнос на телеграммы:</td>
+              <td><span class="s">100 руб.</span> 21 руб. 16 коп.</td>
+            </tr>
+          </table>
 
-      <p class="blue_text">
-        По всем вопросам обращаться в администрацию к К. Михельсону
-      </p>
+          <p class="blue_text">
+            По всем вопросам обращаться в администрацию к К. Михельсону
+          </p>
+        </box>
+      </div>
 
       <div class="phases_carousel">
         <h2>Этапы преображения Васюков</h2>
@@ -101,52 +97,54 @@
 
         <div class="plane"><!-- тут картинка --></div>
         <div id="carousel">
-          <container>
-            <ol>
+          <ol>
+            <container>
               <li>Строительство железнодорожной магистрали Москва-Васюки</li>
+              <li class="only_min_screen">
+                Открытие фешенебельной гостиницы «Проходная пешка» и других
+                небоскрёбов
+              </li>
+            </container>
+            <container class="only_max_screen">
               <li>
                 Открытие фешенебельной гостиницы «Проходная пешка» и других
                 небоскрёбов
               </li>
-            </ol>
-          </container>
-
-          <container>
-            <ol>
+            </container>
+            <container>
               <li>
                 Поднятие сельского хозяйства в радиусе на тысячу километров:
                 производство овощей, фруктов, икры, шоколадных конфет
               </li>
-            </ol>
-          </container>
-          <container>
-            <ol>
+            </container>
+            <container>
               <li>Строительство дворца для турнира</li>
+              <li class="only_min_screen">
+                Размещение гаражей для гостевого автотранспорта
+              </li>
+            </container>
+            <container class="only_max_screen">
               <li>Размещение гаражей для гостевого автотранспорта</li>
-            </ol>
-          </container>
-          <container>
-            <ol>
+            </container>
+            <container>
               <li>
                 Постройка сверхмощной радиостанции для передачи всему миру
                 сенсационных результатов
               </li>
-            </ol>
-          </container>
-          <container>
-            <ol>
+            </container>
+            <container>
               <li>
                 Создание аэропорта «Большие Васюки» с регулярным отправлением
                 почтовых самолётов и дирижаблей во все концы света, включая
                 Лос-Анжелос и Мельбурн
               </li>
-            </ol>
-          </container>
+            </container>
+          </ol>
         </div>
         <div class="page_buttons">
-          <div id="prev_arrow"></div>
-          <span id="phase_count"> - - - - - </span>
-          <div id="next_arrow"></div>
+          <div id="phase_prev_arrow"></div>
+          <span id="phase_count"></span>
+          <div id="phase_next_arrow"></div>
         </div>
       </div>
 

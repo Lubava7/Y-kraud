@@ -8,6 +8,7 @@
   --text-main: #313131;
   --text-light: #ffffff;
   --text-blue: #3057a2;
+  --text-secondary: #d9d9d9;
 
   --color-accent: #f54932;
 
@@ -15,6 +16,7 @@
   --button-light-text: #ffffff;
   --button-light: #ffffff;
   --button-dark-text: #1f1f1f;
+  --button-hover: #fbce51;
 
   --button-members-color: #3057a2;
   --border-secondary: #d0d0d0;
