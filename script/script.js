@@ -42,18 +42,23 @@ const members = [
 ];
 
 const membersSection = document.getElementById('members');
+const memberCount = document.getElementById('member_count');
+
+let currentIndex = 0;
+const totalMembers = members.length;
 
 members.forEach((member) => {
   if (membersSection !== null || membersSection !== undefined) {
     const container = document.createElement('div');
+    container.setAttribute('id', 'member');
     const image = document.createElement('img');
     const name = document.createElement('h4');
     const description = document.createElement('p');
     const button = document.createElement('button');
 
-    name.innerHTML = member.name;
-    description.innerHTML = member.description;
-    button.innerHTML = 'Подробнее';
+    name.textContent = member.name;
+    description.textContent = member.description;
+    button.textContent = 'Подробнее';
 
     if (membersSection !== null || membersSection !== undefined) {
       container.appendChild(image);
@@ -64,4 +69,38 @@ members.forEach((member) => {
 
     membersSection.appendChild(container);
   }
+});
+
+function updateMemberCount() {
+  memberCount.textContent = `${currentIndex + 1}/${totalMembers}`;
+}
+
+function autoScroll() {
+  currentIndex = (currentIndex + 1) % totalMembers;
+  membersSection.scrollTo({
+    left: membersSection.offsetWidth * currentIndex,
+    behavior: 'smooth',
+  });
+  updateMemberCount();
+}
+
+updateMemberCount();
+setInterval(autoScroll, 4000);
+
+document.querySelector('#prev_arrow').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + totalMembers) % totalMembers;
+  membersSection.scrollTo({
+    left: membersSection.offsetWidth * currentIndex,
+    behavior: 'smooth',
+  });
+  updateMemberCount();
+});
+
+document.querySelector('#next_arrow').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % totalMembers;
+  membersSection.scrollTo({
+    left: membersSection.offsetWidth * currentIndex,
+    behavior: 'smooth',
+  });
+  updateMemberCount();
 });
